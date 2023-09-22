@@ -23,12 +23,12 @@ function Body() {
         axios.get(url)
         .then(res => {
             // console.log(res)
-            console.log(res.data)
+            // console.log(res.data)
             // console.log(res.data.plusOne)
             setData(res.data)
             setStatus(res.status)
         }).catch(error => {
-            console.log(error.response)
+            // console.log(error.response)
             setData(error.response.data)
             setStatus(error.response.status)
         })
@@ -40,12 +40,14 @@ function Body() {
         axios.patch(url)
         .then(res => {
             if(res.data){
-                console.log(res.data)
+                // console.log(res.data)
                 setData(res.data)
                 setStatus(res.status)
             }
         }).catch(error => {
-            console.log(error)
+            // console.log(error)
+            setData(error.response.data)
+            setStatus(error.response.status)
         })
         alert('Thank you for responding!')
         setData(null)
