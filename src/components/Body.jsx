@@ -42,12 +42,12 @@ function Body() {
         axios.patch(url)
         .then(res => {
             if(res.data){
-                // console.log(res.data)
+                console.log(res.data)
                 setData(res.data)
                 setStatus(res.status)
-            }
+            } else { return }
         }).catch(error => {
-            // console.log(error)
+            console.log(error)
             setData(error.response.data)
             setStatus(error.response.status)
         })
@@ -75,7 +75,7 @@ function Body() {
         </div>
         <button className="w-32 py-1 px-4 rounded-lg bg-white border-2 border-[#5D2A42] text-[#FB6376]" onClick={search} >Search</button>
         {/* Unconfirmed Respdoned */}
-        {data && data.response === 'Pending' && status === 302 && 
+        {data && data.response === 'Pending' && status === 200 && 
             <div>
                 <p>Will {firstName} {lastName} be attending?</p>
                 <div className="flex justify-center">
@@ -109,7 +109,7 @@ function Body() {
         }
 
         {/* Confirmed Respdoned */}
-        {data && data.response !== 'Pending' && status === 302 && 
+        {data && data.response !== 'Pending' && status === 200 && 
             <div>
                 <p>{firstName} {lastName} has already responded with <strong>{data.response}</strong>.</p>
                 <p className="mt-2">Will {firstName} {lastName} be attending?</p>
