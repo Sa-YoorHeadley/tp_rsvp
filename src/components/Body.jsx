@@ -19,7 +19,7 @@ function Body() {
             return
         }
 
-        const url = `https://ss-rsvp-api.onrender.com/search?firstName=${firstName}&lastName=${lastName}`
+        const url = `https://localhost:3001/search?firstName=${firstName}&lastName=${lastName}`
         axios.get(url)
         .then(res => {
             console.log(res)
@@ -38,7 +38,7 @@ function Body() {
 
     const respond = async () => {
         // setErrors([])
-        const url = `https://ss-rsvp-api.onrender.com/search/${response}?firstName=${firstName}&lastName=${lastName}`
+        const url = `https://localhost:3001/search/${response}?firstName=${firstName}&lastName=${lastName}`
         axios.patch(url)
         .then(res => {
             if(res.data){
@@ -56,6 +56,7 @@ function Body() {
         setStatus(null)
         setFirstName('')
         setLastName('')
+        window.location.reload();
     }
 
     function handleChange (event){
