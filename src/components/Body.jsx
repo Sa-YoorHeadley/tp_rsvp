@@ -25,8 +25,10 @@ function Body() {
             // console.log(res)
             // console.log(res.data)
             // console.log(res.data.plusOne)
-            setData(res.data)
-            setStatus(res.status)
+            if(res.data){
+                setData(res.data)
+                setStatus(res.status)
+            }
         }).catch(error => {
             // console.log(error.response)
             setData(error.response.data)
