@@ -45,7 +45,7 @@ function Body() {
                 console.log(res.data)
                 setData(res.data)
                 setStatus(res.status)
-            } else { return }
+            }
         }).catch(error => {
             console.log(error)
             setData(error.response.data)
