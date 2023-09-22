@@ -13,6 +13,8 @@ function Body() {
     
 
     const search = async () => {
+        window.location.reload();
+
         // setErrors([])
         if(!firstName || !lastName){
             alert('Please enter a first and last name')
@@ -52,11 +54,11 @@ function Body() {
             setStatus(error.response.status)
         })
         alert('Thank you for responding!')
-        setData(null)
-        setStatus(null)
-        setFirstName('')
-        setLastName('')
         window.location.reload();
+        // setData(null)
+        // setStatus(null)
+        // setFirstName('')
+        // setLastName('')
     }
 
     function handleChange (event){
