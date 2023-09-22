@@ -22,7 +22,7 @@ function Body() {
         const url = `https://ss-rsvp-api.onrender.com/search?firstName=${firstName}&lastName=${lastName}`
         axios.get(url)
         .then(res => {
-            // console.log(res)
+            console.log(res)
             // console.log(res.data)
             // console.log(res.data.plusOne)
             if(res.data){
@@ -30,7 +30,7 @@ function Body() {
                 setStatus(res.status)
             }
         }).catch(error => {
-            // console.log(error.response)
+            console.log(error)
             setData(error.response.data)
             setStatus(error.response.status)
         })
