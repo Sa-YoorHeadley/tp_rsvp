@@ -13,8 +13,6 @@ function Body() {
     
 
     const search = async () => {
-        window.location.reload();
-
         // setErrors([])
         if(!firstName || !lastName){
             alert('Please enter a first and last name')
