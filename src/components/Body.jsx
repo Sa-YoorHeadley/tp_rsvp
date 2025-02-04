@@ -19,7 +19,7 @@ function Body() {
       alert("Please enter a first and last name");
       return;
     }
-    const url = `https://tp-rsvp-api.onrender.com/search?firstName=${firstName}&lastName=${lastName}`
+    const url = `https://tp-rsvp-server.onrender.com/search?firstName=${firstName}&lastName=${lastName}`
     // const url = `http://localhost:3001/search?firstName=${firstName}&lastName=${lastName}`;
     axios
       .get(url)
@@ -43,7 +43,7 @@ function Body() {
   const respond = async () => {
     setIsLoadingResponse(true);
     // setErrors([])
-    const url = `https://tp-rsvp-api.onrender.com/search/${response}?firstName=${firstName}&lastName=${lastName}`
+    const url = `https://tp-rsvp-server.onrender.com/search/${response}?firstName=${firstName}&lastName=${lastName}`
     // const url = `http://localhost:3001/search/${response}?firstName=${firstName}&lastName=${lastName}`;
     axios
       .patch(url)
