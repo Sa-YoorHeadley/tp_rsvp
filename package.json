@@ -1,9 +1,9 @@
 {
-  "name": "tt_rsvp-client",
+  "name": "tp_rsvp-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Sa-YoorHeadley.github.io/tt_rsvp",
+  "homepage": "https://Sa-YoorHeadley.github.io/tp_rsvp",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -16,7 +16,7 @@
     "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tt_rsvp-client": "file:"
+    "tp_rsvp-client": "file:"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
